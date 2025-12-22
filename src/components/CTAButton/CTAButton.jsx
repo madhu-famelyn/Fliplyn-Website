@@ -1,6 +1,6 @@
-import './Button.css';
+import './CTAButton.css';
 
-const Button = ({ children, variant = 'primary', onClick, className = '' }) => {
+const CTAButton = ({ children, variant = 'primary', onClick, className = '' }) => {
   return (
     <button 
       className={`btn btn-${variant} ${className}`}
@@ -11,4 +11,4 @@ const Button = ({ children, variant = 'primary', onClick, className = '' }) => {
   );
 };
 
-export default Button;
+export default CTAButton;

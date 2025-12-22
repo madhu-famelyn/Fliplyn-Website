@@ -1,25 +1,26 @@
-import SectionHeading from '../../../../components/SectionHeading/SectionHeading';
+import SectionHeader from '../../../../components/SectionHeader/SectionHeader';
+import IndustryCard from '../../../../components/IndustryCard/IndustryCard';
 import './ProductShowcase.css';
 
 const ProductShowcase = () => {
   const features = [
     {
-      icon: '/icons/select-friendly.png',
+      icon: '/icons/product-showcase/select-friendly.png',
       title: 'Select-Friendly',
       description: 'Fast, intuitive ordering designed for high-traffic environments.'
     },
     {
-      icon: '/icons/customizable.png',
+      icon: '/icons/product-showcase/customizable.png',
       title: 'Customizable Features',
       description: 'Configure menus, workflows, branding, and access controls with ease.'
     },
     {
-      icon: '/icons/applied-features.png',
+      icon: '/icons/product-showcase/applied-features.png',
       title: 'Applied Features',
       description: 'Collect insights, track usage, and generate reports for smarter decision-making.'
     },
     {
-      icon: '/icons/seamless-payments.png',
+      icon: '/icons/product-showcase/seamless-payments.png',
       title: 'Seamless Payments',
       description: 'Accept UPI, cards, wallets, and cash with secure, real-time processing.'
     }
@@ -28,20 +29,19 @@ const ProductShowcase = () => {
   return (
     <section className="product-showcase">
       <div className="container">
-        <SectionHeading 
+        <SectionHeader 
           title="Product Showcase" 
           subtitle="See Fliplyn in action"
         />
         
         <div className="feature-grid">
           {features.map((feature, index) => (
-            <div key={index} className="feature-card">
-              <div className="feature-icon">
-                <img src={feature.icon} alt={feature.title} />
-              </div>
-              <h3 className="feature-title">{feature.title}</h3>
-              <p className="feature-description">{feature.description}</p>
-            </div>
+            <IndustryCard
+              key={index}
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+            />
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
-import './Card.css';
+import './IndustryCard.css';
 
-const Card = ({ icon, title, description, className = '' }) => {
+const IndustryCard = ({ icon, title, description, className = '' }) => {
   return (
     <div className={`card ${className}`}>
       <div className="card-icon">
@@ -12,4 +12,4 @@ const Card = ({ icon, title, description, className = '' }) => {
   );
 };
 
-export default Card;
+export default IndustryCard;

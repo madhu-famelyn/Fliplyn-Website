@@ -1,35 +1,35 @@
 .industries-section {
-  padding: var(--spacing-2xl) 0;
-  background-color: var(--color-white);
+  padding: 64px 0;
+  background-color: #FFFFFF;
 }
 
 .industries-title {
   font-size: clamp(32px, 4vw, 58px);
-  font-weight: var(--font-weight-bold);
+  font-weight: 700;
   text-align: center;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 24px;
 }
 
 .industries-description {
-  font-size: var(--font-size-heading-small);
-  font-weight: var(--font-weight-regular);
+  font-size: 24px;
+  font-weight: 400;
   text-align: center;
   max-width: 900px;
-  margin: 0 auto var(--spacing-2xl);
+  margin: 0 auto 64px;
   line-height: 1.25;
-  color: var(--color-text-primary);
+  color: #000000;
 }
 
 .industries-grid {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: 48px;
 }
 
 .industries-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-lg);
+  gap: 32px;
 }
 
 .industry-item {
@@ -37,34 +37,200 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: var(--spacing-lg);
+  padding: 32px;
   transition: transform 0.3s ease;
 }
 
-.industry-item:hover {
-  transform: translateY(-4px);
+@media (hover: hover) and (pointer: fine) {
+  .industry-item:hover {
+    transform: translateY(-4px);
+  }
 }
 
 .industry-icon {
-  font-size: 80px;
-  margin-bottom: var(--spacing-md);
-  filter: grayscale(0.2);
+  margin-bottom: 24px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.industry-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .industry-name {
-  font-size: var(--font-size-heading-small);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text-primary);
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
   line-height: 1.25;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .industries-section {
+    padding: 48px 0;
+  }
+
+  .industries-title {
+    margin-bottom: 20px;
+  }
+
+  .industries-description {
+    margin: 0 auto 48px;
+  }
+
+  .industries-grid {
+    gap: 40px;
+  }
+}
+
+/* Medium Tablets - iPad Air, Surface Pro */
+@media (max-width: 912px) {
+  .industries-title {
+    font-size: clamp(30px, 4.5vw, 50px);
+    margin-bottom: 18px;
+  }
+
+  .industries-description {
+    font-size: 22px;
+    margin: 0 auto 44px;
+  }
+
+  .industries-grid {
+    gap: 36px;
+  }
+
   .industries-row {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
+    gap: 28px;
   }
 
   .industry-icon {
-    font-size: 60px;
+    width: 75px;
+    height: 75px;
+  }
+
+  .industry-name {
+    font-size: 22px;
+  }
+}
+
+/* Small Tablets - iPad, Asus Zenbook */
+@media (max-width: 820px) {
+  .industries-section {
+    padding: 40px 0;
+  }
+
+  .industries-title {
+    font-size: clamp(28px, 4vw, 44px);
+    margin-bottom: 16px;
+  }
+
+  .industries-description {
+    font-size: 20px;
+    margin: 0 auto 40px;
+  }
+
+  .industries-grid {
+    gap: 32px;
+  }
+
+  .industries-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .industry-item {
+    padding: 22px;
+  }
+
+  .industry-icon {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 14px;
+  }
+
+  .industry-name {
+    font-size: 18px;
+  }
+}
+
+/* Large Mobile */
+@media (max-width: 768px) {
+  .industries-section {
+    padding: 40px 0;
+  }
+
+  .industries-title {
+    font-size: clamp(28px, 5vw, 40px);
+    margin-bottom: 16px;
+  }
+
+  .industries-description {
+    font-size: 20px;
+    margin: 0 auto 40px;
+  }
+
+  .industries-grid {
+    gap: 32px;
+  }
+
+  .industries-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .industry-item {
+    padding: 24px;
+  }
+
+  .industry-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+  }
+
+  .industry-name {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-section {
+    padding: 32px 0;
+  }
+
+  .industries-title {
+    font-size: clamp(24px, 4vw, 32px);
+  }
+
+  .industries-description {
+    font-size: 16px;
+    margin: 0 auto 32px;
+  }
+
+  .industries-grid {
+    gap: 24px;
+  }
+
+  .industries-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .industry-item {
+    padding: 16px;
+  }
+
+  .industry-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .industry-name {
+    font-size: 14px;
   }
 }
