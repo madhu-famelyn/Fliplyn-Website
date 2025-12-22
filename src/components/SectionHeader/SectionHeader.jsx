@@ -1,6 +1,6 @@
-import './SectionHeading.css';
+import './SectionHeader.css';
 
-const SectionHeading = ({ title, subtitle, className = '' }) => {
+const SectionHeader = ({ title, subtitle, className = '' }) => {
   return (
     <div className={`section-heading ${className}`}>
       <h2 className="section-title">{title}</h2>
@@ -9,4 +9,4 @@ const SectionHeading = ({ title, subtitle, className = '' }) => {
   );
 };
 
-export default SectionHeading;
+export default SectionHeader;
