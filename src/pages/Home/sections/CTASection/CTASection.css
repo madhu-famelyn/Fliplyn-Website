@@ -92,17 +92,14 @@
 
 /* Large Mobile */
 @media (max-width: 768px) {
-  .why-choose {
-    padding: 24px 0;
-  }
-
+  .why-choose,
   .cta-section,
   .final-cta {
     padding: 40px 0;
   }
 
   .why-choose-title {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   .cta-title {
@@ -116,17 +113,14 @@
 }
 
 @media (max-width: 480px) {
-  .why-choose {
-    padding: 16px 0;
-  }
-
+  .why-choose,
   .cta-section,
   .final-cta {
     padding: 32px 0;
   }
 
   .why-choose-title {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .cta-title {
