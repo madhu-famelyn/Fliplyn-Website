@@ -1,4 +1,4 @@
-import Button from '../../../../components/Button/Button';
+import CTAButton from '../../../../components/CTAButton/CTAButton';
 import './CTASection.css';
 
 const CTASection = () => {
@@ -19,7 +19,7 @@ const CTASection = () => {
       <section className="final-cta">
         <div className="container">
           <h3 className="final-cta-title">Take the Next Step Toward Smarter Self-Service</h3>
-          <Button variant="primary">Request Demo</Button>
+          <CTAButton variant="primary">Request Demo</CTAButton>
         </div>
       </section>
     </>

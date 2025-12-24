@@ -1,44 +1,134 @@
 .why-choose {
-  padding: var(--spacing-2xl) 0;
-  background-color: var(--color-white);
+  padding: 64px 0;
+  background-color: #FFFFFF;
   text-align: center;
 }
 
 .why-choose-title {
-  font-size: var(--font-size-heading-xl);
-  font-weight: var(--font-weight-bold);
+  font-size: 48px;
+  font-weight: 700;
 }
 
 .cta-section {
   background: linear-gradient(90deg, #FF9701 0%, #FE4801 100%);
-  padding: var(--spacing-xl) 0;
+  padding: 48px 0;
   text-align: center;
 }
 
 .cta-title {
-  font-size: var(--font-size-heading-large);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-white);
+  font-size: 36px;
+  font-weight: 700;
+  color: #FFFFFF;
   margin: 0;
 }
 
 .final-cta {
-  padding: var(--spacing-2xl) 0;
-  background-color: var(--color-white);
+  padding: 64px 0;
+  background-color: #FFFFFF;
   text-align: center;
 }
 
 .final-cta-title {
-  font-size: var(--font-size-heading-medium);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-primary);
-  margin-bottom: var(--spacing-xl);
+  font-size: 28px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 48px;
 }
 
+@media (max-width: 1024px) {
+  .why-choose,
+  .cta-section,
+  .final-cta {
+    padding: 48px 0;
+  }
+
+  .cta-title {
+    font-size: 30px;
+  }
+
+  .final-cta-title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Medium Tablets - iPad Air, Surface Pro */
+@media (max-width: 912px) {
+  .why-choose-title {
+    font-size: 44px;
+  }
+
+  .cta-title {
+    font-size: 28px;
+  }
+
+  .final-cta-title {
+    font-size: 24px;
+    margin-bottom: 36px;
+  }
+}
+
+/* Small Tablets - iPad, Asus Zenbook */
+@media (max-width: 820px) {
+  .why-choose,
+  .cta-section,
+  .final-cta {
+    padding: 40px 0;
+  }
+
+  .why-choose-title {
+    font-size: 40px;
+  }
+
+  .cta-title {
+    font-size: 26px;
+  }
+
+  .final-cta-title {
+    font-size: 22px;
+    margin-bottom: 32px;
+  }
+}
+
+/* Large Mobile */
 @media (max-width: 768px) {
   .why-choose,
   .cta-section,
   .final-cta {
-    padding: var(--spacing-lg) 0;
+    padding: 40px 0;
+  }
+
+  .why-choose-title {
+    font-size: 36px;
+  }
+
+  .cta-title {
+    font-size: 26px;
+  }
+
+  .final-cta-title {
+    font-size: 22px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose,
+  .cta-section,
+  .final-cta {
+    padding: 32px 0;
+  }
+
+  .why-choose-title {
+    font-size: 28px;
+  }
+
+  .cta-title {
+    font-size: 22px;
+  }
+
+  .final-cta-title {
+    font-size: 18px;
+    margin-bottom: 24px;
   }
 }

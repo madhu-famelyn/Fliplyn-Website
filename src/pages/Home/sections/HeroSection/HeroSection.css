@@ -1,8 +1,10 @@
 .hero-section {
-  background: linear-gradient(180deg, var(--color-bg-cream-light) 0%, var(--color-white) 100%);
+  background: linear-gradient(180deg, #FBEAD0 0%, #FFFFFF 100%);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  overflow-x: hidden;
   min-height: 100vh;
+  padding-bottom: 30px;
 }
 
 .hero-section::before {
@@ -22,124 +24,471 @@
 .navbar {
   position: relative;
   z-index: 10;
-  padding: var(--spacing-md) 0;
+  padding: 32px 0;
 }
 
 .nav-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--spacing-lg);
+  position: relative;
 }
 
 .nav-logo img {
-  height: 75px;
+  height: 60px;
   width: auto;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.hamburger-menu span {
+  width: 28px;
+  height: 3px;
+  background-color: #000000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu span.active:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu span.active:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu span.active:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: var(--spacing-lg);
+  gap: 48px;
   margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-  font-size: var(--font-size-nav);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-primary);
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
-  color: var(--color-primary);
+  color: #FF5300;
+}
+
+.nav-cta {
+  white-space: nowrap;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: var(--spacing-2xl) 0;
+  padding: 20px 0 10px;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-2xl);
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
   align-items: center;
+  position: relative;
+  max-width: 1400px;
+  width: 100%;
+  margin-left: 80px;
 }
 
 .hero-text {
-  max-width: 600px;
+  max-width: 650px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text-card {
+  background: linear-gradient(270deg, #FFDE8E 0%, #FFD6A9 72.6%);
+  border-radius: 24px;
+  padding: 48px 32px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  margin-right: -250px;
+  padding-right: 280px;
+  transform: translateY(-40px);
 }
 
 .hero-title {
-  font-size: clamp(36px, 5vw, 72px);
-  font-weight: var(--font-weight-bold);
+  font-size: clamp(32px, 4.5vw, 58px);
+  font-weight: 700;
   line-height: 1.1;
-  margin-bottom: var(--spacing-md);
-  color: var(--color-text-primary);
+  margin-bottom: 24px;
+  color: #000000;
 }
 
 .hero-subtitle {
-  font-size: var(--font-size-body-large);
-  font-weight: var(--font-weight-regular);
-  color: var(--color-text-primary);
-  margin-bottom: var(--spacing-xl);
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 0;
 }
 
 .hero-buttons {
   display: flex;
-  gap: var(--spacing-md);
+  gap: 24px;
   flex-wrap: wrap;
 }
 
 .hero-image {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  min-height: 450px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-image img {
   max-width: 100%;
+  max-height: 600px;
   height: auto;
+  width: auto;
+  object-fit: contain;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
 }
 
 /* Mobile Navigation */
+/* Large Tablets - iPad Pro */
 @media (max-width: 1024px) {
+  /* Reduce vertical gap by allowing hero to size to content on tablets */
+  .hero-section {
+    min-height: auto;
+    padding-bottom: 20px;
+  }
+
+  /* Slightly tighten buttons area so About sits closer */
+  .hero-buttons {
+    margin-top: 18px;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color:  #f2e2cb;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 32px 32px;
+    gap: 24px;
+    box-shadow: -2px 0 16px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
   .nav-links {
-    display: none;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: auto;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 16px 0;
+    font-size: 18px;
+  }
+
+  .nav-cta {
+    width: 100%;
+    margin-top: auto;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
+    gap: 48px;
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    padding: 0 24px;
   }
 
   .hero-text {
+    max-width: 100%;
+    z-index: 2;
+  }
+
+  .hero-text-card {
+    margin-right: 0;
+    padding-right: 32px;
+    transform: translateY(0);
     text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 6vw, 48px);
+  }
+
+  .hero-subtitle {
+    margin-bottom: 0;
+  }
+
+  .hero-image {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  .hero-image img {
+    width: 100%;
     max-width: 100%;
   }
 
   .hero-buttons {
     justify-content: center;
-  }
-
-  .hero-image {
-    order: -1;
+    margin-top: 32px;
   }
 }
 
+/* Force desktop/laptop layout for tablet & small laptop ranges
+   Keep the same two-column, overlapping-card laptop design for
+   devices between 769px and 1024px so appearance matches desktop. */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-section {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: hidden;
+  }
+
+  .hero-section::before {
+    left: 0;
+    right: 0;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    margin-left: 80px;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .hero-text-card {
+    background: linear-gradient(270deg, #FFDE8E 0%, #FFD6A9 72.6%);
+    border-radius: 24px;
+    padding: 48px 32px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    margin-right: -250px;
+    padding-right: 280px;
+    transform: translateY(-40px);
+    z-index: 1;
+    box-sizing: border-box;
+    max-width: 720px;
+  }
+
+  .hero-text {
+    max-width: 650px;
+    z-index: 2;
+    text-align: left;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 450px;
+    position: relative;
+    z-index: 2;
+    margin-left: 0;
+  }
+
+  .hero-image img {
+    max-width: 520px;
+    height: auto;
+    display: block;
+    max-height: 80vh;
+    box-sizing: border-box;
+  }
+}
+
+/* Focused: slightly smaller hero card and fonts for narrow tablets
+   Keep the overlapping aesthetic but reduce card height so it
+   doesn't exceed the image between 768px and 890px */
+@media (min-width: 768px) and (max-width: 890px) {
+  .hero-text-card {
+    padding: 28px 20px;
+    padding-right: 140px;
+    margin-right: -140px;
+    transform: translateY(-20px);
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+
+  .hero-title {
+    font-size: clamp(24px, 3.8vw, 38px);
+    line-height: 1.02;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .hero-image img {
+    max-width: 540px;
+    max-height: 85vh;
+    height: auto;
+    display: block;
+  }
+}
+
+/* Medium Tablets - iPad Air, Surface Pro */
+@media (max-width: 912px) {
+  .hero-grid {
+    gap: 40px;
+    width: 100%;
+    margin-left: 0;
+    padding: 0 22px;
+  }
+
+  .hero-title {
+    font-size: clamp(26px, 5.5vw, 44px);
+  }
+
+  .hero-image {
+    max-width: 380px;
+  }
+}
+
+/* Small Tablets - iPad, Asus Zenbook */
+@media (max-width: 820px) {
+  .hero-grid {
+    gap: 36px;
+    width: 100%;
+    margin-left: 0;
+    padding: 0 20px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  .hero-title {
+    font-size: clamp(24px, 5vw, 40px);
+  }
+
+  .hero-image {
+    max-width: 360px;
+  }
+}
+
+/* Large Mobile */
 @media (max-width: 768px) {
-  .nav-content {
+  .nav-logo img {
+    height: 50px;
+  }
+
+  .hero-grid {
+    display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    margin-left: 0;
+    padding: 0 24px;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
+
+  .hero-text-card {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 24px;
+    margin-right: 0;
+    padding-right: 0;
+    transform: translateY(0);
+  }
+
+  .hero-title {
+    font-size: clamp(20px, 5vw, 28px);
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
   }
 
   .hero-buttons {
     flex-direction: column;
     width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    order: 3;
+    gap: 16px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    padding: 0;
+    order: 2;
+    margin: 32px auto;
+    min-height: auto;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-height: 400px;
+    height: auto;
   }
 
   .hero-buttons .btn {

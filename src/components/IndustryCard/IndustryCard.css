@@ -10,9 +10,11 @@
   align-items: flex-start;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+  }
 }
 
 .card-icon {
@@ -23,6 +25,7 @@
   width: 88px;
   height: 88px;
   object-fit: contain;
+  display: block;
 }
 
 .card-title {
@@ -42,6 +45,8 @@
 @media (max-width: 768px) {
   .card {
     padding: var(--spacing-md);
+    align-items: center;
+    text-align: center;
   }
 
   .card-icon img {
