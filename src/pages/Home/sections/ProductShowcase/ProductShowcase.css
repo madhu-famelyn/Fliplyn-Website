@@ -9,6 +9,10 @@
   gap: 32px;
 }
 
+.product-showcase .card-title {
+  color: var(--color-text-primary);
+}
+
 @media (max-width: 1024px) {
   .product-showcase {
     padding: 48px 0;

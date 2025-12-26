@@ -7,7 +7,8 @@
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -22,8 +23,8 @@
 }
 
 .card-icon img {
-  width: 88px;
-  height: 88px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   display: block;
 }

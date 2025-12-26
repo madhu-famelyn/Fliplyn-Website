@@ -16,6 +16,7 @@ const HeroSection = () => {
           <div className="nav-content">
             <div className="nav-logo">
               <img src="/logo.svg" alt="Fliplyn Logo" />
+              <span className="nav-logo-text">Fliplyn</span>
             </div>
             
             <button 
@@ -47,7 +48,7 @@ const HeroSection = () => {
             <div className="hero-text">
               <div className="hero-text-card">
                 <h1 className="hero-title">
-                  Reimagine Self-Service with <span className="text-primary">Fliplyn.</span>
+                  Reimagine<br />Self-Service<br />with <span className="text-primary">Fliplyn.</span>
                 </h1>
                 <p className="hero-subtitle">
                   Intelligent Kiosk & Digital Signage Solutions.

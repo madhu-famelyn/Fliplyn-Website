@@ -9,6 +9,10 @@
   gap: 32px;
 }
 
+.advanced-capabilities .card-title {
+  color: var(--color-text-primary);
+}
+
 @media (max-width: 1024px) {
   .advanced-capabilities {
     padding: 48px 0;
