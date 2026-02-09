@@ -1,0 +1,120 @@
+:root {
+  --color-primary: #FF5300;
+  --color-secondary: #FE800A;
+  --color-bg-cream-light: #FBEAD0;
+  --color-bg-cream: #FFFAF4;
+  --color-white: #FFFFFF;
+  --color-bg-off-white: #FFFCF7;
+  --color-border-cream: #FFE2BD;
+  --color-text-primary: #000000;
+  --color-text-gray: #393939;
+  --color-shadow-light: #FFEDCE;
+  --color-shadow-dark: rgba(0, 0, 0, 0.10);
+
+  /* WhatsApp gradient */
+  --wa-green-light: #5CFF9D;
+  --wa-green-mid: #25D366;
+  --wa-green-dark: #128C4A;
+
+  /* spacing + sizing (fallback safe) */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-lg: 32px;
+
+  --font-size-heading-medium: 28px;
+  --font-size-body: 15px;
+  --font-size-button: 16px;
+
+  --border-radius-button: 50px;
+
+  --shadow-card: 2px 2px 34px var(--color-shadow-light);
+  --shadow-card-hover: 4px 4px 90px #FFEAD1,
+                       2px 2px 13px var(--color-shadow-dark);
+
+  --font-family-primary: 'DM Sans', sans-serif;
+}
+
+/* ========================= */
+
+.order-page {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-lg);
+  text-align: center;
+  background: var(--color-bg-off-white);
+  font-family: var(--font-family-primary);
+}
+
+.order-title {
+  font-size: var(--font-size-heading-medium);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-primary);
+}
+
+.order-description {
+  font-size: var(--font-size-body);
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-gray);
+}
+
+/* ========================= */
+/* Buttons layout */
+
+.order-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  align-items: center;
+}
+
+.order-btn {
+  padding: 14px 28px;
+  font-size: var(--font-size-button);
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radius-button);
+  color: var(--color-white);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  box-shadow: var(--shadow-card);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  border-radius: 2vh
+}
+
+.order-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* WhatsApp button gradient */
+
+.order-btn.whatsapp {
+  background: linear-gradient(
+    135deg,
+    var(--wa-green-light),
+    var(--wa-green-mid),
+    var(--wa-green-dark)
+  );
+}
+
+/* ========================= */
+/* 📱 Mobile responsiveness */
+
+@media (max-width: 600px) {
+  .order-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .order-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
