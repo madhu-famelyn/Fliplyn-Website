@@ -1,7 +1,7 @@
 import React from "react";
 import "./OrderPage.css";
 import Header from "../Home/sections/HeroSection/header";
-
+import ActiveEventsPage from "./ActiveEvents/ActiveEvents";
 
 const OrderPage = () => {
   const handleFliplynClick = () => {
@@ -17,7 +17,6 @@ const OrderPage = () => {
       <Header />
 
       <div className="order-page">
-        
         <h2 className="order-title">Order Food From Food Court</h2>
 
         <p className="order-description">
@@ -37,6 +36,10 @@ const OrderPage = () => {
           </button>
         </div>
       </div>
+
+      {/* ✅ ACTIVE EVENTS SECTION */}
+      <ActiveEventsPage />
+
     </>
   );
 };

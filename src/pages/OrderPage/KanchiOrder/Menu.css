@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@300;400;500&display=swap');
+
+/* ================================
+   ROOT (SCOPED TO COMPONENT)
+================================ */
+
+.kanchi-menu-page {
+
+  --stone-grey: #c9c9c9;
+  --antique-gold: #bfa75d;
+  --granite: #838181;
+  --temple-stone: #606060;
+  --charcoal: #222222;
+
+  font-family: 'Inter', sans-serif;
+  background: var(--stone-grey);
+  color: var(--charcoal);
+
+}
+
+/* Prevent layout bugs from parent CSS */
+.kanchi-menu-page * {
+  box-sizing: border-box;
+}
+
+/* ================================
+   WRAPPER + KOLAM BACKGROUND
+================================ */
+
+.kanchi-menu-wrapper {
+  position: relative;
+}
+
+/* subtle kolam watermark */
+.kanchi-menu-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/kolam.png");
+  background-size: 600px;
+  opacity: 0.035;
+  pointer-events: none;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.kanchi-menu-header {
+
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  backdrop-filter: blur(8px);
+  background: rgba(201,201,201,0.78);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 26px 64px;
+}
+
+.kanchi-menu-logo {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.kanchi-menu-heading {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 6px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.kanchi-menu-gold-divider {
+  height: 1px;
+  background: var(--antique-gold);
+  margin-top: 8px;
+}
+
+.kanchi-menu-location {
+  color: var(--granite);
+}
+
+/* ================================
+   HERO
+================================ */
+
+.kanchi-menu-hero {
+
+  height: 220px;
+
+  background-size: cover;
+  background-position: center;
+
+  filter: saturate(80%) contrast(105%);
+}
+
+/* ================================
+   GRID
+================================ */
+
+.kanchi-menu-container {
+
+  max-width: 1400px;
+  margin: 90px auto;
+
+  padding: 0 48px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+}
+
+/* ================================
+   CARDS
+================================ */
+
+.kanchi-menu-card {
+
+  background: #f4f2ec;
+
+  border-radius: 18px;
+  padding: 34px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: 280ms ease;
+}
+
+.kanchi-menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0,0,0,0.08);
+}
+
+.kanchi-menu-card h2 {
+
+  font-family: 'Cinzel', serif;
+  color: var(--antique-gold);
+
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+/* divider */
+
+.kanchi-menu-card-divider {
+
+  height: 1px;
+  background: var(--antique-gold);
+  margin: 12px 0 22px;
+}
+
+/* ================================
+   MENU ROW
+================================ */
+
+.kanchi-menu-row {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 0;
+  font-size: 15.5px;
+}
+
+.kanchi-menu-price {
+  font-weight: 500;
+}
+
+/* ================================
+   SIGNATURE SECTION
+================================ */
+
+.kanchi-menu-signature-card {
+
+  grid-column: span 3;
+
+  display: flex;
+  align-items: center;
+  gap: 44px;
+
+  padding: 38px;
+  border-radius: 22px;
+
+  background: rgba(191,167,93,0.12);
+}
+
+.kanchi-menu-signature-image {
+
+  width: 360px;
+  border-radius: 22px;
+
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+.kanchi-menu-signature-text {
+  flex: 1;
+}
+
+/* ================================
+   BRAND (Bottom Identity)
+================================ */
+
+.kanchi-menu-brand {
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 80px 20px 100px;
+
+  text-align: center;
+  background: var(--stone-grey);
+}
+
+/* title */
+
+.kanchi-menu-title {
+
+  font-family: "Cinzel", serif;
+  font-size: 28px;
+
+  letter-spacing: 2px;
+  font-weight: 600;
+
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* tagline */
+
+.kanchi-menu-tagline {
+
+  font-size: 13px;
+  color: var(--temple-stone);
+
+  margin-top: 14px;
+  letter-spacing: 0.8px;
+
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+/* gold divider */
+
+.kanchi-menu-brand::after {
+
+  content: "";
+  width: 140px;
+  height: 1px;
+
+  background: var(--antique-gold);
+
+  margin-top: 22px;
+  opacity: 0.9;
+}
+
+/* ================================
+   FADE IN
+================================ */
+
+.fade-in {
+  animation: kanchiFade 0.8s ease;
+}
+
+@keyframes kanchiFade {
+  from { opacity: 0; transform: translateY(8px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* ================================
+   ✅ RESPONSIVE DESIGN
+================================ */
+
+/* -------- Laptop -------- */
+
+@media (max-width: 1200px) {
+
+  .kanchi-menu-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kanchi-menu-signature-card {
+    grid-column: span 2;
+    flex-direction: column;
+  }
+
+  .kanchi-menu-signature-image {
+    width: 100%;
+    max-width: 460px;
+  }
+}
+
+/* -------- Tablet -------- */
+
+@media (max-width: 768px) {
+
+  .kanchi-menu-header {
+    padding: 18px 24px;
+  }
+
+  .kanchi-menu-heading {
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+
+  .kanchi-menu-container {
+    grid-template-columns: 1fr;
+    padding: 0 22px;
+    gap: 30px;
+  }
+
+  .kanchi-menu-signature-card {
+    grid-column: span 1;
+    padding: 28px;
+  }
+
+  .kanchi-menu-hero {
+    height: 180px;
+  }
+}
+
+/* -------- Large Phones -------- */
+
+@media (max-width: 480px) {
+
+  .kanchi-menu-logo {
+    font-size: 18px;
+  }
+
+  .kanchi-menu-location {
+    display: none;
+  }
+
+  .kanchi-menu-heading {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+
+  .kanchi-menu-card {
+    padding: 24px;
+  }
+
+  .kanchi-menu-row {
+    font-size: 14px;
+  }
+
+  .kanchi-menu-title {
+    font-size: 22px;
+  }
+
+  .kanchi-menu-tagline {
+    font-size: 12px;
+  }
+}
+
+
+
+/* BRAND WRAPPER */
+.brand {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 70px 20px 90px;
+
+  text-align: center;
+  background: #c9c9c9;
+}
+
+/* MAIN TITLE */
+.cafe-title {
+  font-family: "Cinzel", serif;
+  font-size: 26px;
+  letter-spacing: 2px;
+  color: #222222;
+  margin: 0;
+  font-weight: 600;
+
+  white-space: nowrap; /* 🔥 prevents awkward wrapping */
+}
+
+/* TAGLINE */
+.cafe-tagline {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #606060;
+
+  margin-top: 14px;
+  letter-spacing: 0.8px;
+
+  max-width: 420px; /* keeps it elegant */
+  line-height: 1.6;
+}
+
+/* GOLD DIVIDER */
+.brand::after {
+  content: "";
+  width: 140px;
+  height: 1px;
+  background: #bfa75d;
+
+  margin-top: 22px;
+  opacity: 0.9;
+}
