@@ -236,9 +236,13 @@
         width:60px;
     }
 
-    .kanchi-powered span{
-        display:none; /* premium mobile behavior */
-    }
+
+.kanchi-powered span{
+    display:block;
+    font-size:8px;
+    letter-spacing:.3px;
+    opacity:.9;
+}
 
     .kanchi-title{
         font-size:30px;
