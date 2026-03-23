@@ -27,13 +27,13 @@ const OrderPage = () => {
           <button className="order-btn" onClick={handleFliplynClick}>
             Order on Fliplyn App
           </button>
-
+{/* 
           <button
             className="order-btn whatsapp"
             onClick={handleWhatsAppClick}
           >
             Order via WhatsApp
-          </button>
+          </button> */}
         </div>
       </div>
 
