@@ -36,7 +36,7 @@ const ActiveEventsPage = () => {
         {loading ? (
           <p className="loading-text">Loading events...</p>
         ) : events.length === 0 ? (
-          <p className="no-events-text"></p>
+          <p className="no-events-text">No active events available.</p>
         ) : (
           <div className="events-grid">
             {events.map((event) => (
