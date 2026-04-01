@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import CTAButton from "../../../../components/CTAButton/CTAButton";
 import "./HeroSection.css";
 
@@ -48,6 +49,16 @@ const Header = () => {
                 <a href="#resources" onClick={() => setIsMobileMenuOpen(false)}>
                   Resources
                 </a>
+              </li>
+
+              {/* ✅ NEW POLICY LINK */}
+              <li>
+                <Link
+                  to="/policy"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Policy
+                </Link>
               </li>
             </ul>
 
